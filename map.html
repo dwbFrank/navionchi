@@ -24,16 +24,16 @@
                 crossorigin="anonymous"></script>
         <div id="map"></div>
         <script src="js/map.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq2O_xkRDvMUrulPCTLhGX_hSguP5bk8E&callback=initMap&language=ja&region=JP"
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq2O_xkRDvMUrulPCTLhGX_hSguP5bk8E&callback=initMap&language=ja&region=JP&libraries=places"
                 async defer>
                 </script>
         <div class="container-fluid">
                 <form class="addressForm">
                         <div class="form-group">
-                                <input type="text" class="form-control" id="address" aria-describedby="address-search"
+                                <input type="text" class="form-control" id="pac-input" aria-describedby="address-search"
                                         placeholder="Enter address">
                         </div>
-
+                        <!-- <button type="submit" id="address" class="btn btn-secondary btn-lg btn-block">Search</button> -->
                         <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#demo">Let's
                                 Go</button>
                 </form> <!-- Modal -->
@@ -48,7 +48,7 @@
                                                 </button>
                                         </div>
                                         <div class="modal-body">
-                                                        
+
                                         </div>
                                         <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

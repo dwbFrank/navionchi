@@ -1,51 +1,14 @@
-// var map;
-// function initMap() {
-//     if (map == null) {
-//         if (navigator.geolocation) {
-//             navigator.geolocation.getCurrentPosition(success, error);
-//         } else {
-//             alert('geolocation not supported');
-//         }
-
-//         function success(position) {
-//             var myLatLng = {
-//                 lat: position.coords.latitude,
-//                 lng: position.coords.longitude
-//             };
-
-//             map = new google.maps.Map(document.getElementById('map'), {
-//                 center: myLatLng,
-//                 zoom: 18
-//             });
-//             var input = document.getElementById('map-address');
-//             var searchBox = new google.maps.places.SearchBox(input);
-//             map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-//             var marker = new google.maps.Marker({
-//                 position: myLatLng,
-//                 map: map,
-//                 title: 'Hello World!'
-//             });
-//         }
-
-//         function error(msg) {
-//             alert('error: ' + msg);
-//         }
-//     }
-// }
-
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -33.8688, lng: 151.2195 },
         zoom: 13,
-        mapTypeId: 'roadmap',
-        disableDefaultUI: true
+        mapTypeId: 'roadmap'
     });
 
     // Create the search box and link it to the UI element.
-    var input = document.getElementById('pac-input');
+    var input = document.getElementById('map-address');
     var searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     // Bias the SearchBox results towards current map's viewport.
     map.addListener('bounds_changed', function () {
