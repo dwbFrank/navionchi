@@ -1,14 +1,28 @@
-<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<!doctype html>
+<html lang="ja">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+	<title>NaviOnchi</title>
+</head>
 
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs='sourceType: webcam;'>
 		<a-assets>
-			<a-asset-item id="spike-obj" src="img/3d/SPIKE.PSDout.obj"></a-asset-item>
-			<a-asset-item id="spike-mtl" src="img/3d/SPIKE.PSDout.mtl"></a-asset-item>
+			<a-asset-item id="spike-obj" src="img/SPIKE.PSDout.obj"></a-asset-item>
+			<a-asset-item id="spike-mtl" src="img/SPIKE.PSDout.mtl"></a-asset-item>
 		</a-assets>
 
 		<a-entity scale="0.1 0.1 0.1" rotation="0 90 0" obj-model="obj: #spike-obj; mtl: #spike-mtl"></a-entity>
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
+
+</html>
