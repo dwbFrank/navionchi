@@ -22,6 +22,12 @@
                 crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
                 crossorigin="anonymous"></script>
+        <div id="style-selector-control" class="map-control">
+                <input type="radio" name="show-hide" id="hide-poi" class="selector-control">
+                <label for="hide-poi">Hide</label>
+                <input type="radio" name="show-hide" id="show-poi" class="selector-control" checked="checked">
+                <label for="show-poi">Show</label>
+        </div>
         <div id="map"></div>
         <script src="js/map.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsySgS2MFLUPbsCrFkpzgERxYhpVvBhh4&libraries=places&callback=initMap"

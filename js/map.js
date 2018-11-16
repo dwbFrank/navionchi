@@ -86,6 +86,18 @@ function success(position) {
         });
         map.fitBounds(bounds);
     });
+    // Add controls to the map, allowing users to hide/show features.
+    var styleControl = document.getElementById('style-selector-control');
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
+
+    // Apply new JSON when the user chooses to hide/show features.
+    document.getElementById('hide-poi').addEventListener('click', function () {
+        map.setOptions({ styles: styles['hide'] });
+    });
+    document.getElementById('show-poi').addEventListener('click', function () {
+        map.setOptions({ styles: styles['default'] });
+    });
+
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -95,3 +107,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
 }
+var styles = {
+    default: null,
+    hide: [
+        {
+            featureType: 'all',
+            elementType: "labels",
+            stylers: [{ visibility: 'off' }]
+        },
+    ]
+};
