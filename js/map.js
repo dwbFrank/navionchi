@@ -4,7 +4,7 @@ function initMap() {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 18,
         disableDefaultUI: true,
-        styles: styles['hide'],
+        styles: styles['hide']
     });
 
     // Try HTML5 geolocation.
