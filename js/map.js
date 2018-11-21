@@ -3,7 +3,8 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 18,
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        styles: styles['hide'],
     });
 
     // Try HTML5 geolocation.
@@ -25,7 +26,7 @@ function success(position) {
         lng: position.coords.longitude
     };
     infoWindow.setPosition(pos);
-    infoWindow.setContent('Keep Calm and Drink Up.');
+    infoWindow.setContent('現在地');
     infoWindow.open(map);
     map.setCenter(pos);
     var marker = new google.maps.Marker({
@@ -88,6 +89,7 @@ function success(position) {
     });
     // Add controls to the map, allowing users to hide/show features.
     var styleControl = document.getElementById('style-selector-control');
+    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
 
     // Apply new JSON when the user chooses to hide/show features.

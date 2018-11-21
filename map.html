@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
                 crossorigin="anonymous">
         <link rel="stylesheet" href="css/map.css">
-        <title>NavOnchi</title>
+        <title>NaviOnchi</title>
 </head>
 
 <body>
@@ -23,8 +23,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
                 crossorigin="anonymous"></script>
 
-
-        <div class="btn-group btn-group-toggle" id="style-selector-control">
+        <div class="btn-group btn-group-toggle map-control" id="style-selector-control">
                 <label class="btn btn-primary ">
                         <input type="radio" name="show-hide" id="show-poi" class="selector-control" autocomplete="off"
                                 checked="checked">
@@ -35,43 +34,11 @@
                         隠す
                 </label>
         </div>
-
-
-
-
-
-        <!-- <div id="style-selector-control" class="map-control btn-group btn-group-toggle">
-                <input type="radio" name="show-hide" id="hide-poi" class="selector-control">
-                <label for="hide-poi">Hide</label>
-                <input type="radio" name="show-hide" id="show-poi" class="selector-control" checked="checked">
-                <label for="show-poi">Show</label>
-        </div> -->
-
-        <div id="map"></div>
+        <div id="map">
+        </div>
         <script src="js/map.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsySgS2MFLUPbsCrFkpzgERxYhpVvBhh4&libraries=places&callback=initMap"
                 async defer></script>
-        <!-- <div class="container-fluid">
-                <form class="addressForm" action="ar.html">
-                        <div class="form-group">
-                                <div class="input-group">
-                                        <div class="input-group-prepend">
-                                                <span class="input-group-text" id="inputGroupPrepend3">目的地</span>
-                                        </div>
-                                        <input type="text" class="form-control is-invalid" id="pac-input" placeholder="Enter address"
-                                                aria-describedby="address-search inputGroupPrepend3" required>
-                                        <div class="invalid-feedback">
-                                                Please choose a destination.
-                                        </div>
-                                </div>
-                        </div>
-                        <button class="btn btn-success" type="submit">AR Video</button>
-                </form> 
-        </div> -->
-
-
-
-
         <div class="container-fluid">
                 <form class="addressForm needs-validation" action="ar.html" novalidate>
                         <div class="form-group">
@@ -86,7 +53,7 @@
                                         </div>
                                 </div>
                         </div>
-                        <button class="btn btn-primary" type="submit">AR</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">AR</button>
                 </form>
         </div>
 

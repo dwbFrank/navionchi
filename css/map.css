@@ -11,3 +11,8 @@ html, body {
 .addressForm {
     margin-top: 3%;
 }
+
+.map-control{
+    margin: 10px;
+    padding-right: 5px;
+}
