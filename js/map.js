@@ -27,7 +27,7 @@ function success(position) {
     };
     infoWindow.setPosition(pos);
     infoWindow.setContent('現在地');
-    infoWindow.open(map);
+    // infoWindow.open(map);
     map.setCenter(pos);
     var marker = new google.maps.Marker({
         position: pos,
